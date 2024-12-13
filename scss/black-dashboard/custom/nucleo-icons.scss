@@ -1,0 +1,127 @@
+/* --------------------------------
+Nucleo Outline Web Font - nucleoapp.com/
+License - nucleoapp.com/license/
+Created using IcoMoon - icomoon.io
+-------------------------------- */
+
+/* Font-face */
+$font-path: '../fonts';
+
+@font-face {
+  font-family: 'Nucleo';
+  src: url(#{$font-path}/nucleo.eot);
+  src: url(#{$font-path}/nucleo.eot) format('embedded-opentype'),
+    url(#{$font-path}/nucleo.woff2) format('woff2'),
+    url(#{$font-path}/nucleo.woff) format('woff'),
+    url(#{$font-path}/nucleo.ttf) format('truetype'),
+    url(#{$font-path}/nucleo.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------ 
+Base class definition 
+-------------------------*/
+
+.tim-icons {
+  display: inline-block;
+  font: normal normal normal 1em/1 'Nucleo';
+  vertical-align: middle;
+  speak: none;
+  text-transform: none;
+
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-icon-detail {
+  text-align: center;
+  padding: 45px 0 30px;
+  border: 1px solid #e44cc4;
+  border-radius: .1875rem;
+  margin: 15px 0;
+  min-height: 168px;
+
+  i {
+    color: #FFFFFF;
+    font-size: 1.5em;
+  }
+
+  p {
+    color: #e44cc4 !important;
+    margin-top: 30px;
+    padding: 0 10px;
+    font-size: .7142em;
+  }
+}
+
+/*------------------------ 
+Change icon size 
+-------------------------*/
+
+.tim-icons-sm {
+  font-size: 0.8em;
+}
+
+.tim-icons-lg {
+  font-size: 1.2em;
+}
+
+/* absolute units */
+.tim-icons-16 {
+  font-size: 16px;
+}
+
+.tim-icons-32 {
+  font-size: 32px;
+}
+
+/*---------------------------------- 
+Add a square/circle background 
+-----------------------------------*/
+
+.tim-icons-bg-square,
+.tim-icons-bg-circle {
+  padding: 0.35em;
+}
+
+.tim-icons-bg-circle {
+  border-radius: 50%;
+}
+
+/*------------------------ 
+Spinning icons 
+-------------------------*/
+
+.tim-icons-is-spinning {
+  animation: tim-icons-spin 2s infinite linear;
+}
+
+@keyframes tim-icons-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*------------------------ 
+Rotated/flipped icons 
+-------------------------*/
+
+/*------------------------ 
+Icons 
+-------------------------*/
+
+$icon-prefix: "icon-";
+
+@each $icon in (
+  alert-circle-exc, align-center, align-left-2, app, atom, attach-87, badge, bag-16, bank, basket-simple, bell-55, bold, book-bookmark, bulb-63, bullet-list-67, bus-front-12, button-pause, button-power, calendar-60, camera-18, caps-small, cart, chart-bar-32, chart-pie-36, chat-33, check-2, cloud-download-93, cloud-upload-94, coins, compass-05, controller, credit-card, delivery-fast, double-left, double-right, email-85, gift-2, globe-2, headphones, heart-2, html5, image-02, istanbul, key-25, laptop, light-3, link-72, lock-circle, map-big, minimal-down, minimal-left, minimal-right, minimal-up, mobile, molecule-40, money-coins, notes, palette, paper, pencil, pin, planet, puzzle-10, satisfied, scissors, send, settings-gear-63, settings, simple-add, simple-delete, simple-remove, single-02, single-copy-04, sound-wave, spaceship, square-pin, support-17, tablet-2, tag, tap-02, tie-bow, time-alarm, trash-simple, triangle-right-17, trophy, tv-2, upload, user-run, vector, video-66, volume-98, wallet-43, watch-time, wifi, world, zoom-split, refresh-01, refresh-02, shape-star, components
+) {
+  .#{$icon-prefix}#{$icon}::before {
+    content: "\ea#{index($icon, $icon) + 2}";
+  }
+}

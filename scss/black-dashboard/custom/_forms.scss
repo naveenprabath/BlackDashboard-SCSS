@@ -1,0 +1,125 @@
+
+
+/* Placeholder styling */
+@include form-control-placeholder(#6c757c, 1); // Sets placeholder color with opacity
+
+/* General styling for the form control (input field) */
+.form-control {
+  border-color: $light-mode-border; // Default border color
+  border-radius: $border-radius-lg;
+  font-size: $font-size-sm;
+  @include transition-input-focus-color();
+
+  // Dark mode settings
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-mode-bg;
+    color: $white;
+    border-color: $dark-mode-border;
+  }
+
+  // Light mode settings
+  @media (prefers-color-scheme: light) {
+    background-color: $light-mode-bg !important; // Set to gray
+    color: $black !important;
+  }
+
+  // Remove focus styling for both light and dark modes
+  &:focus {
+    @include box-shadow(none); // Ensures no box-shadow on focus
+  }
+
+  // Input-group elements styling
+  & + .input-group-append .input-group-text,
+  & + .input-group-prepend .input-group-text {
+    background-color: $white;
+  }
+
+  // Additional elements styling
+  & + .form-control-feedback {
+    border-radius: $border-radius-lg;
+    margin-top: -7px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    vertical-align: middle;
+  }
+
+  .open & {
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    border-bottom-color: $transparent-bg;
+  }
+}
+
+.form-control#inlineFormInputGroup {
+  background-color: white;
+  width: 300px; 
+  height: 20px;
+  padding: 10px; 
+
+  &::placeholder {
+    font-weight: bold; 
+  }
+  
+}
+
+/* Success styling */
+.has-success .input-group-append .input-group-text,
+.has-success .input-group-prepend .input-group-text,
+.has-success .form-control {
+  border-color: lighten($black, 5%);
+}
+
+/* Danger styling */
+.has-danger .form-control,
+.has-danger .input-group-append .input-group-text,
+.has-danger .input-group-prepend .input-group-text {
+  border-color: lighten($danger-states, 5%);
+  color: $danger-states;
+  background-color: rgba(222, 222, 222, .1);
+}
+
+/* Success and error feedback icons */
+.has-success,
+.has-danger {
+  &:after {
+    font-family: 'nucleo';
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    font-size: 11px;
+
+    // Success icon
+    content: "\ea1b";
+    color: $success;
+
+    &.has-danger {
+      content: "\ea48"; // Danger icon
+      color: $danger-states;
+    }
+  }
+
+  &.form-control-lg &:after {
+    font-size: 13px;
+    top: 24px;
+  }
+
+  &.has-label &:after {
+    top: 37px;
+  }
+
+  &.form-check &:after {
+    display: none !important;
+  }
+
+  &.form-check .form-check-label {
+    color: $success;
+  }
+}
+
+/* Danger state feedback for form check */
+.has-danger {
+  &.form-check .form-check-label {
+    color: $danger-states;
+  }
+}

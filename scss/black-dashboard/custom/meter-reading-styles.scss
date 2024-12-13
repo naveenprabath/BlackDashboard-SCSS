@@ -1,0 +1,266 @@
+// General form control error styling
+.form-control.error {
+    border: 2px solid #ff4d4d !important;
+  }
+  
+  // Meter entry button styles
+  .meter-entry {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #bffdf8;
+    border-radius: 5px;
+    background-color: #3ff6ed;
+    color: rgb(57, 56, 56);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #00a2ff;
+    }
+  }
+  
+  // Selected meter entry styling
+  .meter-entry-selected {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #bffdf8;
+    border-radius: 5px;
+    background-color: #00a2ff;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  // Form input field styling
+  #divisionIDSearch,
+  #searchType,
+  #logicalDeviceNumberSearch, 
+  #template-name,
+  #manufactureName,
+  #meterType,
+  #divisionID,
+  #template-name{
+    background-color: #13141e;
+    color: white;
+    border: #000000;
+  }
+  
+  // Styling for manufacture name input field
+  .manufactureName {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    border: #000000;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.5rem 0.7rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  // Collapse functionality styles
+  .collapse {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  
+    &.show {
+      display: block;
+    }
+  }
+  
+  // Button toggle styles
+  .btn-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    display: block;
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &::after {
+      content: '+';
+      float: right;
+      font-size: 18px;
+      line-height: 1;
+    }
+  
+    &.collapsed::after {
+      content: '-';
+    }
+  }
+  
+  // Table styling
+  .reading-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #e0e0e0; // Light text color
+  
+    th {
+      border: 1px solid #0056b3;
+      color: #ffffff; // White text for headers
+      padding: 12px;
+      text-align: left;
+    }
+  
+    td {
+      border: 1px solid #0056b3;
+      padding: 10px;
+    }
+  
+    tr:hover {
+      background-color: #004080; // Highlight color on hover
+    }
+  }
+  
+  // Navbar styling
+  #navbar-heading p {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    color: #0070b1 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    line-height: 1.4 !important;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  // Hidden element styling
+  .hidden_element {
+    display: none;
+  }
+  
+  // Button link styling
+  .btn-link {
+    color: #85c1e9 !important;
+  }
+  
+  // Text styling for light theme with dark background
+  .light-text-dark-back {
+    color: #85c1e9 !important;
+  }
+  
+  // Terminal styling
+  #terminal {
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    height: 300px !important;
+    max-height: 300px !important;
+    overflow: hidden !important;
+    background-color: rgba(255, 255, 255, 0.116) !important;
+    color: #85c1e9 !important;
+    padding: 0px !important;
+    border: 0px solid #ccc !important;
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+  
+  #terminalInputBox {
+    height: 300px !important;
+    max-height: 300px !important;
+    margin: 0 !important;
+    line-height: 20px !important;
+    padding: 5px !important;
+  }
+  
+  .terminal-input p {
+    color: #85c1e9 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  // Readings container (grid layout)
+  .readings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  // Reading card styling
+  .reading-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: fit-content;
+  
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+  
+  // Placeholder styles for input fields
+  #logicalDeviceNumber::placeholder,
+  #phoneNo::placeholder,
+  #imeiNo::placeholder,
+  #tcpPort::placeholder,
+  #ipAddress::placeholder,
+  #accountNumber::placeholder,
+  #accountNumberSearch::placeholder, 
+  #logicalDeviceNumber::placeholder{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+  
+  #logicalDeviceNumber::placeholder,
+  #phoneNo::placeholder,
+  #imeiNo::placeholder,
+  #tcpPort::placeholder,
+  #ipAddress::placeholder,
+  #accountNumber::placeholder,
+  #accountNumberSearch::placeholder,
+  #logicalDeviceNumber::placeholder {
+    color: lightgray;
+    opacity: 0.6;
+  }
+  
+
+
+  .dropdown-menu {
+    background-color: $default;
+    border: none;
+    border-radius: 0.25rem;
+
+    .dropdown-item {
+        color: #fff;
+
+        &:hover {
+            background-color: gray ;
+            color: #fff;
+            border-radius: 0.25rem;
+        }
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.dropdown-arrow {
+  width: 0;
+  height: 0;
+  margin-left: 5px; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid blue; 
+  transform: translateY(-2px);
+}
+
