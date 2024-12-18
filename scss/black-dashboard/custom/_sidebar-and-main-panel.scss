@@ -478,6 +478,7 @@
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
       background-color: $info;
       padding: 4px 14px;
+      border: 2px solid info;
       &:hover {
         background-color: darken($info, 40%); 
         color: lighten(#fff, 10%);           
@@ -497,6 +498,7 @@
     background-color: $default;
     color:#fff;
     padding: 4px 14px;
+    border: 2px solid info;
     &:hover {
       background-color: darken($info, 10%); 
       color: lighten(#fff, 10%);           
@@ -563,6 +565,7 @@
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
       background-color: $success;
       padding: 4px 14px;
+      border: 2px solid $success;
       &:hover {
         background-color: darken($success, 40%); 
         color: lighten(#fff, 10%);           
@@ -582,6 +585,7 @@
     background-color: $default;
     color: $secondary;
     padding: 4px 14px;
+    border: 2px  solid $success;
     &:hover {
       background-color: darken($success, 10%); 
       color: lighten(#fff, 10%);           
@@ -647,6 +651,7 @@
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
       background-color:  $primary;
       padding: 4px 14px;
+      border : 2px solid $primary;
       &:hover {
         background-color: darken($primary, 10%); 
         color: lighten(#fff, 10%);           
@@ -666,6 +671,7 @@
     background-color: $default;
     color: $secondary;
     padding: 4px 14px;
+    border: 2px solid $primary;
     &:hover {
       background-color: darken($primary, 10%); 
       color: lighten(#fff, 10%);           

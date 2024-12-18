@@ -5,8 +5,8 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Specify the directories for SCSS and CSS files
-scss_directory_path = r'C:/Users/Nveen Balasooriya/Desktop/new/scss'  
-css_directory_path = r'C:/Users/Nveen Balasooriya/Desktop/new/scss/style'   
+scss_directory_path = r'C:/Users/Nveen Balasooriya/Desktop/BlackDashboard SCSS/scss'  
+css_directory_path = r'C:/Users/Nveen Balasooriya/Desktop/BlackDashboard SCSS/scss/style'   
 
 scss_file_name = 'black-dashboard.scss'  # SCSS file name
 css_file_name = 'style.css'    # CSS output file name
