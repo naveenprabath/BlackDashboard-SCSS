@@ -2,7 +2,7 @@
 $light-mode-background: #7F7F7F;
 $dark-mode-background: #363636;
 $light-mode-border: #d1d1d1;
-$dark-mode-border: #444;
+$dark-mode-border: white;
 
 @mixin form-control-focus {
   &:focus {

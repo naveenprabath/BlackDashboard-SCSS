@@ -141,7 +141,7 @@
 }
 
 .notification {
-  background: $danger;
+  background: blue;
 	color: $white;
 	border-radius: $border-radius-xl;
 	height: 6px;
@@ -228,6 +228,7 @@
               padding-bottom: 0;
             }
             .dropdown-menu{
+
               .dropdown-item{
                 margin-top: 0;
                 padding-left: 24px;
@@ -423,4 +424,16 @@
       margin-left: 0;
       margin-right: 0;
   }
+}
+
+
+.navbar {
+  .dropdown-menu {
+    position: absolute;  
+    top: 60px;          
+    left: auto;         
+    right: 0;           
+    transform: translateY(0); 
+    z-index: 1000;       
+}
 }

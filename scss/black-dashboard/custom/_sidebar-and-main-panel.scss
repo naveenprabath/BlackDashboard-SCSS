@@ -478,15 +478,16 @@
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
       background-color: $info;
       padding: 4px 14px;
-      border: 2px solid info;
+      border: 2px solid $info;
+      color: white;
       &:hover {
-        background-color: darken($info, 40%); 
+        
         color: lighten(#fff, 10%);           
       }
     
       
       &:focus {
-        background-color: lighten($info, 40%); 
+         
         color: darken(#fff, 10%);
         outline: 2px solid lighten($info, 20%); 
         outline-offset: 2px;
@@ -496,17 +497,17 @@
     box-shadow: none;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $default;
-    color:#fff;
+    color:$info;
     padding: 4px 14px;
-    border: 2px solid info;
+    border: 2px solid $info;
     &:hover {
-      background-color: darken($info, 10%); 
+      background-color: lighten($info, 10%); 
       color: lighten(#fff, 10%);           
     }
   
     
     &:focus {
-      background-color: lighten($info, 10%); 
+      background-color: ($info, 10%); 
       color: darken(#fff, 10%);
       outline: 2px solid lighten($info, 20%); 
       outline-offset: 2px;
@@ -566,14 +567,15 @@
       background-color: $success;
       padding: 4px 14px;
       border: 2px solid $success;
+      color: white;
       &:hover {
-        background-color: darken($success, 40%); 
+        
         color: lighten(#fff, 10%);           
       }
     
       
       &:focus {
-        background-color: lighten($success, 40%); 
+      
         color: darken(#fff, 10%);
         outline: 2px solid lighten($success, 20%); 
         outline-offset: 2px;
@@ -583,11 +585,11 @@
     box-shadow: none;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $default;
-    color: $secondary;
+    color: $success;
     padding: 4px 14px;
     border: 2px  solid $success;
     &:hover {
-      background-color: darken($success, 10%); 
+      background-color: lighten($success, 10%); 
       color: lighten(#fff, 10%);           
     }
   
@@ -652,14 +654,15 @@
       background-color:  $primary;
       padding: 4px 14px;
       border : 2px solid $primary;
+      color: white;
       &:hover {
-        background-color: darken($primary, 10%); 
+       
         color: lighten(#fff, 10%);           
       }
     
       
       &:focus {
-        background-color: lighten($primary, 10%); 
+        
         color: darken(#fff, 10%);
         outline: 2px solid lighten($primary, 20%); 
         outline-offset: 2px;
@@ -669,9 +672,10 @@
     box-shadow: none;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $default;
-    color: $secondary;
+    color: $primary;
     padding: 4px 14px;
     border: 2px solid $primary;
+
     &:hover {
       background-color: darken($primary, 10%); 
       color: lighten(#fff, 10%);           

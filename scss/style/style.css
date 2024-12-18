@@ -9857,7 +9857,7 @@ img {
     font-size: 20px; }
 
 .notification {
-  background: #3066c8;
+  background: blue;
   color: #ffffff;
   border-radius: 0.875rem;
   height: 6px;
@@ -10182,6 +10182,14 @@ img {
   .navbar[class*='navbar-toggleable-'] .container {
     margin-left: 0;
     margin-right: 0; } }
+
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 60px;
+  left: auto;
+  right: 0;
+  transform: translateY(0);
+  z-index: 1000; }
 
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -10628,7 +10636,7 @@ table.tablesorter thead tr .headerSortDown {
     padding: 0 10px;
     background: linear-gradient(#222a42, #1d253b); }
   .fixed-plugin .dropdown .dropdown-menu .tim-icons {
-    top: 5px; }
+    top: 2px; }
   .fixed-plugin .dropdown-menu:after,
   .fixed-plugin .dropdown-menu:before {
     right: 10px;
@@ -11215,12 +11223,11 @@ table.tablesorter thead tr .headerSortDown {
       padding: 10px 22px;
       background-color: #1c6bac;
       padding: 4px 14px;
-      border: 2px solid info; }
+      border: 2px solid #1c6bac;
+      color: white; }
       .main-panel[data="blue"] .btn-simple.active:hover {
-        background-color: black;
         color: white; }
       .main-panel[data="blue"] .btn-simple.active:focus {
-        background-color: #a4cef0;
         color: #e6e6e6;
         outline: 2px solid #4c9ee2;
         outline-offset: 2px; }
@@ -11228,14 +11235,14 @@ table.tablesorter thead tr .headerSortDown {
       box-shadow: none;
       padding: 10px 22px;
       background-color: #263148;
-      color: #fff;
+      color: #1c6bac;
       padding: 4px 14px;
-      border: 2px solid info; }
+      border: 2px solid #1c6bac; }
       .main-panel[data="blue"] .btn-simple:hover {
-        background-color: #155080;
+        background-color: #2386d8;
         color: white; }
       .main-panel[data="blue"] .btn-simple:focus {
-        background-color: #2386d8;
+        background-color: #1c6bac, 10%;
         color: #e6e6e6;
         outline: 2px solid #4c9ee2;
         outline-offset: 2px; }
@@ -11276,12 +11283,11 @@ table.tablesorter thead tr .headerSortDown {
       padding: 10px 22px;
       background-color: #27279c;
       padding: 4px 14px;
-      border: 2px solid #27279c; }
+      border: 2px solid #27279c;
+      color: white; }
       .main-panel[data="green"] .btn-simple.active:hover {
-        background-color: black;
         color: white; }
       .main-panel[data="green"] .btn-simple.active:focus {
-        background-color: #a6a6e9;
         color: #e6e6e6;
         outline: 2px solid #5555d4;
         outline-offset: 2px; }
@@ -11289,11 +11295,11 @@ table.tablesorter thead tr .headerSortDown {
       box-shadow: none;
       padding: 10px 22px;
       background-color: #263148;
-      color: #f4f5f7;
+      color: #27279c;
       padding: 4px 14px;
       border: 2px solid #27279c; }
       .main-panel[data="green"] .btn-simple:hover {
-        background-color: #1d1d73;
+        background-color: #3131c5;
         color: white; }
       .main-panel[data="green"] .btn-simple:focus {
         background-color: #3131c5;
@@ -11338,12 +11344,11 @@ table.tablesorter thead tr .headerSortDown {
       padding: 10px 22px;
       background-color: #6d90f8;
       padding: 4px 14px;
-      border: 2px solid #6d90f8; }
+      border: 2px solid #6d90f8;
+      color: white; }
       .main-panel[data="primary"] .btn-simple.active:hover {
-        background-color: #3c6bf6;
         color: white; }
       .main-panel[data="primary"] .btn-simple.active:focus {
-        background-color: #9eb5fa;
         color: #e6e6e6;
         outline: 2px solid #cedafd;
         outline-offset: 2px; }
@@ -11351,7 +11356,7 @@ table.tablesorter thead tr .headerSortDown {
       box-shadow: none;
       padding: 10px 22px;
       background-color: #263148;
-      color: #f4f5f7;
+      color: #6d90f8;
       padding: 4px 14px;
       border: 2px solid #6d90f8; }
       .main-panel[data="primary"] .btn-simple:hover {
@@ -12723,6 +12728,55 @@ textarea.form-control {
   border-right: 5px solid transparent;
   border-top: 5px solid blue;
   transform: translateY(-2px); }
+
+/* The switch - the box around the slider */
+.switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like an inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  margin-bottom: 0; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e5e5ea;
+    /* iOS light mode switch background */
+    transition: .4s;
+    border-radius: 30px; }
+    .switch .slider:before {
+      position: absolute;
+      content: "";
+      height: var(--size-of-icon, 1.4em);
+      width: var(--size-of-icon, 1.4em);
+      border-radius: 50%;
+      left: var(--slider-offset, 0.3em);
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(40deg, #ffd60a, #ffcc00 70%);
+      /* Sun-like gradient */
+      transition: .4s; }
+  .switch input:checked + .slider {
+    background-color: #1c1c1e;
+    /* iOS dark mode switch background */ }
+    .switch input:checked + .slider:before {
+      left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+      background: #1c1c1e;
+      /* Dark mode moon color */
+      box-shadow: inset -3px -2px 5px -2px #8e8e93, inset -10px -4px 0 0 #d1d1d6;
+      /* iOS-like moon effect */ }
 
 /*
  * Container style
