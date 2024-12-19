@@ -326,3 +326,44 @@
         margin:0;
     }
 }
+
+.color-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; // Add space between the previous section and this one
+    padding: 5px 0;  // Adding some vertical padding for extra space
+
+    .color-label {
+        font-size: $font-size-xs;
+        color: $white;
+        margin: 0 10px; // Add space between the labels
+    }
+
+    .badge {
+        margin: 0 5px; // Space between badges
+    }
+
+    .light-badge, .dark-badge {
+        margin: 0 10px; // More space between light and dark badges
+        border: 1px solid $info;
+        
+        &:hover {
+            border: 1px solid $info;
+        }
+    }
+
+    .light-badge {
+        background: $white;
+        &:hover {
+            background: $white;
+        }
+    }
+
+    .dark-badge {
+        background: $black;
+        &:hover {
+            background: $black;
+        }
+    }
+}

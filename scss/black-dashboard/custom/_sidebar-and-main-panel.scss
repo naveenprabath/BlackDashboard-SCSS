@@ -445,29 +445,29 @@
   @include transitions(0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
   &[data="blue"] {
-    border-top: 2px solid $info;
+    border-top: 2px solid $info-states;
     .btn-fixed{
-      background-color:  $info ;
+      background-color:  $info-states ;
       color: #fff;
     }
-    .btn-primary, .alert-success {
+    .btn-primary,.btn-danger,  .alert-success {
       display: inline-block;
-      background-color: $info !important;
+      background-color: $info-states!important;
       color: #fff;
       border: none;
       border-radius: 5px;
       padding: 10px 20px;
       cursor: pointer;
       &:hover {
-        background-color: darken($info, 10%); 
+        background-color: darken($info-states, 10%); 
         color: lighten(#fff, 10%);           
       }
     
       
       &:focus {
-        background-color: lighten($info, 10%); 
+        background-color: lighten($info-states, 10%); 
         color: darken(#fff, 10%);
-        outline: 2px solid lighten($info, 20%); 
+        outline: 2px solid lighten($info-states, 20%); 
         outline-offset: 2px;
       }
            
@@ -476,9 +476,9 @@
       .btn-simple.active{
       box-shadow: none;
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
-      background-color: $info;
+      background-color: $info-states;
       padding: 4px 14px;
-      border: 2px solid $info;
+      border: 2px solid $info-states;
       color: white;
       &:hover {
         
@@ -489,7 +489,7 @@
       &:focus {
          
         color: darken(#fff, 10%);
-        outline: 2px solid lighten($info, 20%); 
+        outline: 2px solid lighten($info-states, 20%); 
         outline-offset: 2px;
       }
   }
@@ -497,65 +497,79 @@
     box-shadow: none;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $default;
-    color:$info;
+    color:$info-states;
     padding: 4px 14px;
-    border: 2px solid $info;
+    border: 2px solid $info-states;
     &:hover {
-      background-color: lighten($info, 10%); 
+      background-color: lighten($info-states, 10%); 
       color: lighten(#fff, 10%);           
     }
   
     
     &:focus {
-      background-color: ($info, 10%); 
+      background-color: ($info-states, 10%); 
       color: darken(#fff, 10%);
-      outline: 2px solid lighten($info, 20%); 
+      outline: 2px solid lighten($info-states, 20%); 
       outline-offset: 2px;
     }
      
   }
       .navbar-text#navbar-heading p {
-      color: $info !important;
+      color: $info-states !important;
     }
     .a.nav-link.active {
-      color: $info;
+      color: $info-states;
       font-weight: 300;
     }
     .form-group input:focus,
     .form-group select:focus {
-      border-color: $info;
-      box-shadow: 0 0 2px $info;
+      border-color: $info-states;
+      box-shadow: 0 0 2px $info-states;
       outline: none;
     }
     .tim-icons.icon-wifi,.tim-icons.icon-delivery-fast{
-      color: $info; 
+      color: $info-states; 
     }
     .diagnostics-textarea {
-      border: 2px solid $info;
+      border: 2px solid $info-states;
     }
+    .dropdown-arrow {
+     
+      border-top: 5px solid $info-states; 
+     
+    }
+    .notification{
+      background-color: $info-states;
+      border: 1px solid $info-states;
+    }
+    // Only change the button colors
+
+}
+
     
- }
+    
+ 
 
   &[data="green"] {
-    border-top: 2px solid $success;
-    .btn-primary, .alert-success {
+    border-top: 2px solid $success-states;
+    .btn-primary,.btn-danger,  .alert-success {
       display: inline-block;
-      background-color: $success !important;
+      background-color: $success-states !important;
       color: #fff;
       border: none;
       border-radius: 5px;
       padding: 10px 20px;
       cursor: pointer;
       &:hover {
-        background-color: darken($info, 40%); 
+        background-color: darken($success-states, 40%); 
         color: lighten(#fff, 10%);           
       }
     
       
       &:focus {
-        background-color: lighten($success, 40%); 
+        background-color: lighten($success-states, 40%); 
         color: darken(#fff, 10%);
-        outline: 2px solid lighten($success, 20%); 
+        outline: 2px solid lighten($success-states, 20%); 
         outline-offset: 2px;
       }
          
@@ -564,9 +578,9 @@
     .btn-simple.active{
       box-shadow: none;
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
-      background-color: $success;
+      background-color: $success-states;
       padding: 4px 14px;
-      border: 2px solid $success;
+      border: 2px solid $success-states;
       color: white;
       &:hover {
         
@@ -577,7 +591,7 @@
       &:focus {
       
         color: darken(#fff, 10%);
-        outline: 2px solid lighten($success, 20%); 
+        outline: 2px solid lighten($success-states, 20%); 
         outline-offset: 2px;
       }
   }
@@ -585,64 +599,75 @@
     box-shadow: none;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $default;
-    color: $success;
+    color: $success-states;
     padding: 4px 14px;
-    border: 2px  solid $success;
+    border: 2px  solid $success-states;
     &:hover {
-      background-color: lighten($success, 10%); 
+      background-color: lighten($success-states, 10%); 
       color: lighten(#fff, 10%);           
     }
   
     
     &:focus {
-      background-color: lighten($success, 10%); 
+      background-color: lighten($success-states, 10%); 
       color: darken(#fff, 10%);
-      outline: 2px solid lighten($success, 20%); 
+      outline: 2px solid lighten($success-states, 20%); 
       outline-offset: 2px;
     }
      
   }
       .navbar-text#navbar-heading p {
-      color: $success !important;
+      color: $success-states !important;
     }
     .a.nav-link.active {
-      color: $success;
+      color: $success-states;
       font-weight: 300;
     }
     .form-group input:focus,
     .form-group select:focus {
-      border-color: $success;
-      box-shadow: 0 0 2px $success;
+      border-color: $success-states;
+      box-shadow: 0 0 2px $success-states;
       outline: none;
     }
     .tim-icons.icon-wifi,
     .tim-icons.icon-delivery-fast {
-      color: $success; 
+      color: $success-states; 
     }
     .diagnostics-textarea {
-      border: 2px solid $success;
+      border: 2px solid $success-states;
     }
+    .dropdown-arrow {
+     
+      border-top: 5px solid $success-states; 
+     
+    }
+    .notification{
+      background-color: $success-states;
+      border: 1px solid $success-states;
+    }
+    
+    
   }
   &[data="primary"] {
-    border-top: 2px solid $primary;
-    .btn-primary, .alert-success {
+    border-top: 2px solid $primary-states;
+    .btn-primary,.btn-danger, .alert-success {
       display: inline-block;
-      background-color:  $primary!important;
+      background-color:  $primary-states!important;
       color: #fff;
       border: none;
       border-radius: 5px;
       padding: 10px 20px;
       cursor: pointer;
       &:hover {
-        background-color: darken($primary, 40%); 
+        background-color: darken($primary-states, 40%); 
         color: lighten(#fff, 10%);           
       }
     
       
       &:focus {
-        background-color: lighten($primary, 40%); 
+        background-color: lighten($primary-states, 40%); 
         color: darken(#fff, 10%);
-        outline: 2px solid lighten($primary, 20%); 
+        outline: 2px solid lighten($primary-states, 20%); 
         outline-offset: 2px;
       }
         
@@ -651,9 +676,9 @@
         .btn-simple.active{
       box-shadow: none;
       padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
-      background-color:  $primary;
+      background-color:  $primary-states;
       padding: 4px 14px;
-      border : 2px solid $primary;
+      border : 2px solid $primary-states;
       color: white;
       &:hover {
        
@@ -664,7 +689,7 @@
       &:focus {
         
         color: darken(#fff, 10%);
-        outline: 2px solid lighten($primary, 20%); 
+        outline: 2px solid lighten($primary-states, 20%); 
         outline-offset: 2px;
       }
        }
@@ -672,42 +697,52 @@
     box-shadow: none;
     padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
     background-color: $default;
-    color: $primary;
+    color: $primary-states;
     padding: 4px 14px;
-    border: 2px solid $primary;
+    border: 2px solid $primary-states;
 
     &:hover {
-      background-color: darken($primary, 10%); 
+      background-color: darken($primary-states, 10%); 
       color: lighten(#fff, 10%);           
     }
   
     
     &:focus {
-      background-color: lighten($primary, 10%); 
+      background-color: lighten($primary-states, 10%); 
       color: darken(#fff, 10%);
-      outline: 2px solid lighten($primary, 20%); 
+      outline: 2px solid lighten($primary-states, 20%); 
       outline-offset: 2px;
     }
   }
       .navbar-text#navbar-heading p {
-      color:  $primary!important;
+      color:  $primary-states!important;
     }
     .a.nav-link.active {
-      color:  $primary;
+      color:  $primary-states;
       font-weight: 300;
     }
     .form-group input:focus,
     .form-group select:focus {
-      border-color:  $primary;
-      box-shadow: 0 0 2px  $primary;
+      border-color:  $primary-states;
+      box-shadow: 0 0 2px  $primary-states;
       outline: none;
     }
     .tim-icons.icon-wifi .icon-delivery-fast {
-      color: $primary;
+      color: $primary-states;
     }
     .diagnostics-textarea {
-      border: 2px solid $primary;
+      border: 2px solid $primary-states;
     }
+    .dropdown-arrow {
+     
+      border-top: 5px solid $primary-states; 
+     
+    }
+    .notification{
+      background-color: $primary-states;
+      border: 1px solid $primary-states;
+    }
+    
    }
 
 
